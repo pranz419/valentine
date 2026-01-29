@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>For my baby Arjean</title>
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: #fff;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+    }
+
+    button {
+      font-size: 20px;
+      padding: 10px 25px;
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+      transition: transform 0.2s ease;
+    }
+
+    #yes {
+      background-color: #ff4081;
+      color: white;
+    }
+
+    #no {
+      background-color: #9e9e9e;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+<img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWltaGZ2bmpsOWNqa2xkcWtjNzVubTJqNTU5NmVqdHlwOTB0aWc1eiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/enrq327a3sMIJAS5jA/200.webp"
+  <h1>Will you be my valentine?</h1>
+
+  <div class="buttons">
+    <button id="yes">Yes</button>
+    <button id="no">No</button>
+  </div>
+
+<script>
+  let size = 1;
+  let noClicks = 0;
+
+  const yesBtn = document.getElementById("yes");
+  const noBtn = document.getElementById("no");
+
+  const noTexts = [
+    "No",
+    "sure ka na jan?",
+    "talaga lang ah",
+    "okay fine",
+    "🥺",
+    "hehehhehehe"
+  ];
+
+  noBtn.addEventListener("click", () => {
+    // Make YES bigger
+    size += 0.2;
+    yesBtn.style.transform = `scale(${size})`;
+
+    // Change NO text
+    noClicks++;
+    if (noClicks < noTexts.length) {
+      noBtn.textContent = noTexts[noClicks];
+    }
+  });
+
+  yesBtn.addEventListener("click", () => {
+    document.body.innerHTML = "<h1>Okay Iloveyousomuch mahal❤️</h1>";
+  });
+</script>
+
+</body>
+</html>
